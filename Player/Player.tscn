@@ -1,0 +1,174 @@
+[gd_scene load_steps=30 format=3 uid="uid://d3nl14dqtq48o"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_h1ft3"]
+[ext_resource type="Texture2D" uid="uid://c3rgk5pyklew2" path="res://PNG/sprites/player/player-idle/player-idle-1.png" id="2_vbqi0"]
+[ext_resource type="Texture2D" uid="uid://bejcyacfjesv6" path="res://PNG/sprites/player/player-idle/player-idle-2.png" id="3_iknwo"]
+[ext_resource type="Texture2D" uid="uid://bj8wtyvsg3mly" path="res://PNG/sprites/player/player-idle/player-idle-3.png" id="4_c5fjw"]
+[ext_resource type="Texture2D" uid="uid://c7cngind643f" path="res://PNG/sprites/player/player-idle/player-idle-4.png" id="5_us77l"]
+[ext_resource type="Texture2D" uid="uid://bcgbtvip8ema" path="res://PNG/sprites/player/player-idle/player-idle-5.png" id="6_82jr1"]
+[ext_resource type="Texture2D" uid="uid://c1fauvd1d37rt" path="res://PNG/sprites/player/player-idle/player-idle-6.png" id="7_5y80d"]
+[ext_resource type="Texture2D" uid="uid://dqkia0qjmu2v5" path="res://PNG/sprites/player/player-idle/player-idle-7.png" id="8_bvna7"]
+[ext_resource type="Texture2D" uid="uid://bbpwfmcbnf2an" path="res://PNG/sprites/player/player-idle/player-idle-8.png" id="9_05euc"]
+[ext_resource type="Texture2D" uid="uid://4r4b4846ytkj" path="res://PNG/sprites/player/player-idle/player-idle-9.png" id="10_c0v4i"]
+[ext_resource type="Texture2D" uid="uid://cjssc7r83myai" path="res://PNG/sprites/player/player-jump/player-jump-1.png" id="11_ofoft"]
+[ext_resource type="Texture2D" uid="uid://e0ymrjiw63nd" path="res://PNG/sprites/player/player-jump/player-jump-2.png" id="12_wleag"]
+[ext_resource type="Texture2D" uid="uid://dwprlm7ypww07" path="res://PNG/sprites/player/player-jump/player-jump-3.png" id="13_2sdly"]
+[ext_resource type="Texture2D" uid="uid://rsh5lfgub1o4" path="res://PNG/sprites/player/player-jump/player-jump-4.png" id="14_k5o7w"]
+[ext_resource type="Texture2D" uid="uid://dcl6mpg2ilnv1" path="res://PNG/sprites/player/player-skip/player-skip-1.png" id="15_6do6c"]
+[ext_resource type="Texture2D" uid="uid://cjchp8fegbul0" path="res://PNG/sprites/player/player-skip/player-skip-2.png" id="16_uxtts"]
+[ext_resource type="Texture2D" uid="uid://crhdtw13mfw" path="res://PNG/sprites/player/player-skip/player-skip-3.png" id="17_ulnqk"]
+[ext_resource type="Texture2D" uid="uid://bmbpq584u8snu" path="res://PNG/sprites/player/player-skip/player-skip-4.png" id="18_ihqje"]
+[ext_resource type="Texture2D" uid="uid://dyk45vwbh6qbe" path="res://PNG/sprites/player/player-skip/player-skip-5.png" id="19_7lyj8"]
+[ext_resource type="Texture2D" uid="uid://c0ipvpidawmib" path="res://PNG/sprites/player/player-skip/player-skip-6.png" id="20_6yr2i"]
+[ext_resource type="Texture2D" uid="uid://bnml4b3hlqdcr" path="res://PNG/sprites/player/player-skip/player-skip-7.png" id="21_nxmhd"]
+[ext_resource type="Texture2D" uid="uid://10v635pofm2n" path="res://PNG/sprites/player/player-skip/player-skip-8.png" id="22_eepbp"]
+[ext_resource type="Texture2D" uid="uid://chq362flqjq4i" path="res://PNG/environment/layers/background.png" id="23_nxqt2"]
+[ext_resource type="Texture2D" uid="uid://0vlke13p7pkj" path="res://PNG/environment/layers/middleground.png" id="24_21hqh"]
+[ext_resource type="Texture2D" uid="uid://dxl6a3h8ns1b0" path="res://PNG/environment/props/mushroom-red.png" id="25_b7mod"]
+[ext_resource type="Texture2D" uid="uid://d245734xgwsh7" path="res://PNG/environment/props/vine.png" id="26_brr3r"]
+[ext_resource type="Texture2D" uid="uid://bmufxovetoo3a" path="res://PNG/environment/props/plant.png" id="27_w22r3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mji1c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8xbt6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vbqi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iknwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c5fjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_us77l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_82jr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5y80d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bvna7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_05euc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c0v4i")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ofoft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wleag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2sdly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k5o7w")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_6do6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uxtts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ulnqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ihqje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7lyj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6yr2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_nxmhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_eepbp")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_h1ft3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mji1c")
+
+[node name="Container" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Container"]
+sprite_frames = SubResource("SpriteFrames_8xbt6")
+animation = &"Idle"
+frame_progress = 0.828168
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.6, 2.6)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -3000
+position = Vector2(-124, -3)
+texture = ExtResource("23_nxqt2")
+
+[node name="Background2" type="Sprite2D" parent="."]
+z_index = -3000
+position = Vector2(63, -2)
+texture = ExtResource("23_nxqt2")
+
+[node name="Background" type="Sprite2D" parent="Background2"]
+z_index = -3000
+position = Vector2(201, -1)
+texture = ExtResource("23_nxqt2")
+
+[node name="Middleground" type="Sprite2D" parent="."]
+z_index = -2000
+position = Vector2(-30, -4)
+scale = Vector2(1.00911, 1)
+texture = ExtResource("24_21hqh")
+
+[node name="Middleground" type="Sprite2D" parent="Middleground"]
+z_index = -1000
+position = Vector2(368, 1)
+texture = ExtResource("24_21hqh")
+
+[node name="Mushroom-red" type="Sprite2D" parent="."]
+position = Vector2(20, 25)
+texture = ExtResource("25_b7mod")
+
+[node name="Vine" type="Sprite2D" parent="."]
+position = Vector2(164, -12)
+texture = ExtResource("26_brr3r")
+
+[node name="Vine" type="Sprite2D" parent="Vine"]
+position = Vector2(164, -12)
+texture = ExtResource("26_brr3r")
+
+[node name="Plant" type="Sprite2D" parent="."]
+position = Vector2(138, 22)
+texture = ExtResource("27_w22r3")
+
+[node name="Plant" type="Sprite2D" parent="Plant"]
+position = Vector2(-238, -3)
+texture = ExtResource("27_w22r3")
